@@ -26,10 +26,11 @@ class SOCIALCRAWLER:
                     wanted_articles.append(wanted_article)
         return wanted_articles
 
-    def get_ig_articles(self, accounts, last_x_mins):
+    def get_ig_articles(self, target_accounts, last_x_mins, ig_account, ig_password):
         wanted_articles = []
         insta = instaloader.Instaloader()
-        for account in accounts:
+        insta.login(ig_account, ig_password)
+        for account in target_accounts:
             profile = instaloader.Profile.from_username(insta.context, account)
             check_time = datetime.now() + timedelta(minutes=int(last_x_mins))
             posts = profile.get_posts()
@@ -111,7 +112,7 @@ if __name__ == "__main__":
             ["dcard.tw"], "-300", "fb_account", "fb_password"
         )
     )
-    print(crawler.get_ig_articles(["dcard.tw"], "-300"))
+    print(crawler.get_ig_articles(["dcard.tw"], "-300", "ig_account", "ig_password"))
     print(
         crawler.get_twitter_articles(
             "c_key", "c_secret", "a_token", "a_secret", ["NBA"], "-300"
