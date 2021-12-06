@@ -6,6 +6,9 @@
 ## social_crawler.py
 * 在 `facebook`、`instagram`、`twitter` 三大社群平台上蒐集指定帳號的發文。
 * 蒐集回來的資料以 JSON 格式儲存。
+* get_fb_articles 參數 : 目標帳號(list), 過去X分鐘的發文(str), FB帳號(str), FB密碼(str)。
+* get_ig_articles 參數 : 目標帳號(list), 過去X分鐘的發文(str)。
+* get_twitter_articles 參數 : consumer_key, consumer_secret, access_token, access_token_secret(這四項在 twitter 申請), 目標帳號(list), 過去X分鐘的發文(str)。
 
 ## Requirements
 python 3.7
