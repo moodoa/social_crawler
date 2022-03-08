@@ -1,7 +1,7 @@
 # social_crawler
 爬取 facebook, instagram, twitter 指定帳號的發文
 
-![alt text](https://media.disrn.com/articles/a60e5f49-1277-4815-ad4a-2e56d51b2cf6.jpg)
+![alt text](https://i.imgur.com/HC1v8Cb.gif)
 
 ## social_crawler.py
 * 在 `facebook`、`instagram`、`twitter` 三大社群平台上蒐集指定帳號的發文。
